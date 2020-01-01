@@ -7,3 +7,4 @@
 const hello = (name: string) => {
     console.log(`Hello ${name}`);
 }
+exports = hello;
