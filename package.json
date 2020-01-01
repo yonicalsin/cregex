@@ -1,0 +1,31 @@
+{
+  "name": "cregex",
+  "version": "1.0.0",
+  "description": "☕ Regular validation expressions (regex) for javascript🎉",
+  "main": "dist/src/index.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonicb/cregex.git"
+  },
+  "keywords": [
+    "cregex",
+    "regex",
+    "regular",
+    "expression",
+    "regex",
+    "js",
+    "regex",
+    "javascript",
+    "typescript",
+    "regex",
+    "test"
+  ],
+  "author": "Yoni Calsin <helloyonicb@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yonicb/cregex/issues"
+  },
+  "homepage": "https://github.com/yonicb/cregex#readme"
+}
