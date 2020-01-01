@@ -26,10 +26,10 @@ function build() {
         .pipe(tsProject())
         .js.pipe(gulp.dest("dist"))
         .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
+        // .pipe(sourcemaps.init({ loadMaps: true }))
         .pipe(uglify())
-        .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('dist'));
+        // .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('dist'));
 }
 function message(cb, msg = `
     ========================
