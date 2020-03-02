@@ -1,3 +1,9 @@
+/*!
+ * Cregex v1.0.5 (https://github.com/yoicalsin/cregex)
+ * Copyright 2019 The Cregex Authors
+ * Copyright 2019 Yoni Calsin <@helloyonicb@gmail.com>.
+ * Licensed under MIT (https://github.com/yoicalsin/cregex/blob/master/LICENSE)
+ */
 var cregexs = {
     isEmail: function () {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
