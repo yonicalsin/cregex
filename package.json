@@ -4,9 +4,9 @@
    "description": "☕ Regular validation expressions (regex) for javascript🎉",
    "main": "dist/index.js",
    "scripts": {
-      "start": "yarn prebuild && gulp",
-      "build": "yarn prebuild && gulp prod",
-      "test": "jest",
+      "format": "prettier --write \"lib/**/*.ts\" ",
+      "build": "yarn prebuild & tsc",
+      "dev": "yarn prebuild & tsc -w",
       "prebuild": "rimraf dist"
    },
    "type": "index.d.ts",
