@@ -8,7 +8,7 @@
       "target": "es2017",
       "sourceMap": false,
       "outDir": "./",
-      "baseUrl": "./src",
+      "baseUrl": "./",
       "incremental": false
    },
    "exclude": ["node_modules", "dist"]
