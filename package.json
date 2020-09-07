@@ -12,7 +12,7 @@
    "type": "index.d.ts",
    "repository": {
       "type": "git",
-      "url": "git+https://github.com/yonicb/cregex.git"
+      "url": "git+https://github.com/yonycalsin/cregex.git"
    },
    "keywords": [
       "cregex",
@@ -30,9 +30,9 @@
    "author": "Yoni Calsin <helloyonicb@gmail.com>",
    "license": "MIT",
    "bugs": {
-      "url": "https://github.com/yonicb/cregex/issues"
+      "url": "https://github.com/yonycalsin/cregex/issues"
    },
-   "homepage": "https://github.com/yonicb/cregex#readme",
+   "homepage": "https://github.com/yonycalsin/cregex#readme",
    "devDependencies": {
       "@types/jest": "^24.0.25",
       "@types/node": "^13.1.2",

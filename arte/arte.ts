@@ -1,50 +1,50 @@
 /*!
- * Cregex v1.0.5 (https://github.com/yoicalsin/cregex)
+ * Cregex v1.0.5 (https://github.com/yonycalsin/cregex)
  * Copyright 2019 The Cregex Authors
- * Copyright 2019 Yoni Calsin <@helloyonicb@gmail.com>.
- * Licensed under MIT (https://github.com/yoicalsin/cregex/blob/master/LICENSE)
+ * Copyright 2019 Yony Calsin.
+ * Licensed under MIT (https://github.com/yonycalsin/cregex/blob/master/LICENSE)
  */
 var cregexs = {
-   isEmail: function() {
+   isEmail: function () {
       return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
    },
-   isEmpty: function() {
+   isEmpty: function () {
       return /^\s*$/i;
    },
-   isNoEmpty: function() {
+   isNoEmpty: function () {
       return /^(\w+\S+)$/;
    },
-   blacklist: function(chars) {
+   blacklist: function (chars) {
       if (chars === void 0) {
          chars = [];
       }
       return new RegExp('^(?!.*(?:' + chars.join('|') + '))', 'g');
    },
-   isAscii: function() {
+   isAscii: function () {
       return /^[\x00-\x7F]+$/;
    },
-   isBIC: function() {
+   isBIC: function () {
       return /^[A-z]{4}[A-z]{2}\w{2}(\w{3})?$/;
    },
-   isBase32: function() {
+   isBase32: function () {
       return /^[A-Z2-7]+=*$/;
    },
-   isBase64: function() {
+   isBase64: function () {
       return /[^A-Z0-9+\/=]/i;
    },
-   isBoolean: function() {
+   isBoolean: function () {
       return /^(true|false|1|0)$/gi;
    },
-   isCreditCard: function() {
+   isCreditCard: function () {
       return /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|(222[1-9]|22[3-9][0-9]|2[3-6][0-9]{2}|27[01][0-9]|2720)[0-9]{12}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11}|6[27][0-9]{14})$/;
    },
-   isFullWidth: function() {
+   isFullWidth: function () {
       return /[^\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]/;
    },
-   isHalfWidth: function() {
+   isHalfWidth: function () {
       return /[\u0020-\u007E\uFF61-\uFF9F\uFFA0-\uFFDC\uFFE8-\uFFEE0-9a-zA-Z]/;
    },
-   isHash: function(algorithm) {
+   isHash: function (algorithm) {
       var lengths = {
          md5: 32,
          md4: 32,
@@ -62,37 +62,37 @@ var cregexs = {
       };
       return new RegExp('^[a-fA-F0-9]{' + lengths[algorithm] + '}$');
    },
-   isHexColor: function() {
+   isHexColor: function () {
       return /^#?([0-9A-F]{3}|[0-9A-F]{6})$/i;
    },
-   isHexadecimal: function() {
+   isHexadecimal: function () {
       return /^(0x|0h)?[0-9A-F]+$/i;
    },
-   isLength: function(options) {
+   isLength: function (options) {
       return new RegExp('^.{' + options.min + ',' + options.max + '}$');
    },
-   isLowercase: function() {
+   isLowercase: function () {
       return /^[a-z]+$/g;
    },
-   isMacAddress: function() {
+   isMacAddress: function () {
       return /^([0-9a-fA-F][0-9a-fA-F]:){5}([0-9a-fA-F][0-9a-fA-F])$/;
    },
-   isMacAddressNoColons: function() {
+   isMacAddressNoColons: function () {
       return /^([0-9a-fA-F]){12}$/;
    },
-   isMacAddressWithHyphen: function() {
+   isMacAddressWithHyphen: function () {
       return /^([0-9a-fA-F][0-9a-fA-F]-){5}([0-9a-fA-F][0-9a-fA-F])$/;
    },
-   isMacAddressWithSpaces: function() {
+   isMacAddressWithSpaces: function () {
       return /^([0-9a-fA-F][0-9a-fA-F]\s){5}([0-9a-fA-F][0-9a-fA-F])$/;
    },
-   isMD5: function() {
+   isMD5: function () {
       return /^[a-f0-9]{32}$/;
    },
-   isMagnetURI: function() {
+   isMagnetURI: function () {
       return /^magnet:\?xt=urn:[a-z0-9]+:[a-z0-9]{32,40}&dn=.+&tr=.+$/i;
    },
-   isMobilePhone: function(locale) {
+   isMobilePhone: function (locale) {
       var phones = {
          'am-AM': /^(\+?374|0)((10|[9|7][0-9])\d{6}$|[2-4]\d{7}$)/,
          'ar-AE': /^((\+?971)|0)?5[024568]\d{7}$/,
@@ -188,19 +188,19 @@ var cregexs = {
       phones['zh-MO'] = phones['en-MO'];
       return phones[locale];
    },
-   isMultibyte: function() {
+   isMultibyte: function () {
       return /[^\x00-\x7F]/;
    },
-   isNumeric: function() {
+   isNumeric: function () {
       return /^[+-]?([0-9]*[.])?[0-9]+$/;
    },
-   isOctal: function() {
+   isOctal: function () {
       return /^(0o)?[0-7]+$/i;
    },
-   isPort: function() {
+   isPort: function () {
       return /^()([1-9]|[1-5]?[0-9]{2,4}|6[1-4][0-9]{3}|65[1-4][0-9]{2}|655[1-2][0-9]|6553[1-5])$/;
    },
-   isPostalCode: function(locale) {
+   isPostalCode: function (locale) {
       var threeDigit = /^\d{3}$/;
       var fourDigit = /^\d{4}$/;
       var fiveDigit = /^\d{5}$/;
@@ -261,7 +261,7 @@ var cregexs = {
       };
       return patterns[locale];
    },
-   isRFC3339: function() {
+   isRFC3339: function () {
       var dateFullYear = /[0-9]{4}/;
       var dateMonth = /(0[1-9]|1[0-2])/;
       var dateMDay = /([12]\d|0[1-9]|3[01])/;
@@ -288,16 +288,16 @@ var cregexs = {
       var rfc3339 = new RegExp(fullDate.source + '[ tT]' + fullTime.source);
       return rfc3339;
    },
-   isSlug: function() {
+   isSlug: function () {
       return /^[^-_](?!.*?[-_]{2,})([a-z0-9\\-]{1,}).*[^-_]$/;
    },
-   isSurrogatePair: function() {
+   isSurrogatePair: function () {
       return /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
    },
-   isUrl: function() {
+   isUrl: function () {
       return /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
    },
-   isUUID: function(version) {
+   isUUID: function (version) {
       if (version === void 0) {
          version = 'all';
       }
@@ -309,7 +309,7 @@ var cregexs = {
       };
       return uuid[version];
    },
-   isUppercase: function() {
+   isUppercase: function () {
       return /\b[A-Z0-9]+\b/;
    },
 };
